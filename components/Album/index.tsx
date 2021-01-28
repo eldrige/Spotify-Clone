@@ -1,21 +1,27 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 
 export type AlbumProps = {
   album: {
     id: string;
     imageUri: string;
-    artistHeadline: string;
+    artistsHeadline: string;
   };
 };
 
 const Album = (props: AlbumProps) => {
+  const handlePress = () => {
+    console.warn(`Album was ${props.album.artistsHeadline} pressed`);
+  };
+
   return (
-    <View style={styles.container}>
-      <Image source={{ uri: props.album.imageUri }} style={styles.image} />
-      <Text style={styles.text}>{props.album.artistHeadline}</Text>
-    </View>
+    <TouchableWithoutFeedback onPress={() => handlePress()}>
+      <View style={styles.container}>
+        <Image source={{ uri: props.album.imageUri }} style={styles.image} />
+        <Text style={styles.text}>{props.album.artistsHeadline}</Text>
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 

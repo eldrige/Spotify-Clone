@@ -2,8 +2,7 @@ import * as React from 'react';
 import { FlatList, StyleSheet } from 'react-native';
 import AlbumCategory from '../components/AlbumCategory';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
+import { View } from '../components/Themed';
 
 import albumCategories from '../data/albumCategories';
 
