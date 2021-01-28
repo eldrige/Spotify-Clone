@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Image, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
@@ -11,12 +12,17 @@ export type AlbumProps = {
 };
 
 const Album = (props: AlbumProps) => {
+  // this will give us reference to our navigation
+  const navigation = useNavigation();
   const handlePress = () => {
-    console.warn(`Album was ${props.album.artistsHeadline} pressed`);
+    // the second option is the payload
+    navigation.navigate('AlbumScreen', {
+      id: props.album.id,
+    });
   };
 
   return (
-    <TouchableWithoutFeedback onPress={() => handlePress()}>
+    <TouchableWithoutFeedback onPress={handlePress}>
       <View style={styles.container}>
         <Image source={{ uri: props.album.imageUri }} style={styles.image} />
         <Text style={styles.text}>{props.album.artistsHeadline}</Text>
@@ -24,5 +30,4 @@ const Album = (props: AlbumProps) => {
     </TouchableWithoutFeedback>
   );
 };
-
 export default Album;

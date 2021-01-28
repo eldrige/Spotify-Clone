@@ -4,7 +4,7 @@ import { View, Text } from 'react-native';
 const AlbumScreen = () => {
   return (
     <View>
-      <Text>Album Screen</Text>
+      <Text style={{ color: '#fff' }}>Album Screen</Text>
     </View>
   );
 };

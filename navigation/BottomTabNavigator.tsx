@@ -1,5 +1,4 @@
 import {
-  Ionicons,
   EvilIcons,
   MaterialCommunityIcons,
   FontAwesome5,
@@ -105,7 +104,7 @@ function TabOneNavigator() {
         options={{ headerTitle: 'Home' }}
       />
       <TabOneStack.Screen
-        name="TabTwoScreen"
+        name="AlbumScreen"
         component={AlbumScreen}
         options={{ headerTitle: 'Album' }}
       />
