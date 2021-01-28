@@ -2,8 +2,8 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: 'red',
     width: 200,
+    margin: 5,
   },
   text: {
     color: 'grey',
@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '100%',
-    height: 200,
+    height: 175,
   },
 });
 
