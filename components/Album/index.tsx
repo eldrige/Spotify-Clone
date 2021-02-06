@@ -15,7 +15,7 @@ const Album = (props: AlbumProps) => {
   // this will give us reference to our navigation
   const navigation = useNavigation();
   const handlePress = () => {
-    // the second option is the payload
+    // * the second option is the payload
     navigation.navigate('AlbumScreen', {
       id: props.album.id,
     });
